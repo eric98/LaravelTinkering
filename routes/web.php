@@ -11,12 +11,20 @@
 |
 */
 
+use App\Task;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('home', function(){
     echo 'Hola sóc la HOME';
+});
+
+Route::get('tasks','TaskController@index');
+
+Route::get('createFakeTasks', function (){
+    factory(Task::class,50)->create();
 });
 
 // Cruddy by desifn CRUD: Create Update Retrieve Delete
