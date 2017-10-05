@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('home', function(){
+    echo 'Hola sóc la HOME';
+});
+
+// Cruddy by desifn CRUD: Create Update Retrieve Delete
+//Route::post
+//Route::put
+//Route::delete
